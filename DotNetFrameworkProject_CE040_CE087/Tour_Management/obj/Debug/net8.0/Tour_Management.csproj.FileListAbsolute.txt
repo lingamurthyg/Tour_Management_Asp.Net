@@ -1,0 +1,11 @@
+/modernize-data/studio-data/TNT1001/APP400932/transformed-code/256/studio-workspace/TMSUpgrade3/DotNetFrameworkProject_CE040_CE087/Tour_Management/obj/Debug/net8.0/Tour_Management.csproj.AssemblyReference.cache
+/modernize-data/studio-data/TNT1001/APP400932/transformed-code/256/studio-workspace/TMSUpgrade3/DotNetFrameworkProject_CE040_CE087/Tour_Management/obj/Debug/net8.0/Tour_Management.GeneratedMSBuildEditorConfig.editorconfig
+/modernize-data/studio-data/TNT1001/APP400932/transformed-code/256/studio-workspace/TMSUpgrade3/DotNetFrameworkProject_CE040_CE087/Tour_Management/obj/Debug/net8.0/Tour_Management.csproj.CoreCompileInputs.cache
+/modernize-data/studio-data/TNT1001/APP400932/transformed-code/256/studio-workspace/TMSUpgrade3/DotNetFrameworkProject_CE040_CE087/Tour_Management/obj/Debug/net8.0/Tour_Management.sourcelink.json
+/modernize-data/studio-data/TNT1001/APP400932/transformed-code/256/studio-workspace/TMSUpgrade3/DotNetFrameworkProject_CE040_CE087/Tour_Management/bin/Debug/net8.0/Tour_Management.deps.json
+/modernize-data/studio-data/TNT1001/APP400932/transformed-code/256/studio-workspace/TMSUpgrade3/DotNetFrameworkProject_CE040_CE087/Tour_Management/bin/Debug/net8.0/Tour_Management.dll
+/modernize-data/studio-data/TNT1001/APP400932/transformed-code/256/studio-workspace/TMSUpgrade3/DotNetFrameworkProject_CE040_CE087/Tour_Management/bin/Debug/net8.0/Tour_Management.pdb
+/modernize-data/studio-data/TNT1001/APP400932/transformed-code/256/studio-workspace/TMSUpgrade3/DotNetFrameworkProject_CE040_CE087/Tour_Management/obj/Debug/net8.0/Tour_Management.dll
+/modernize-data/studio-data/TNT1001/APP400932/transformed-code/256/studio-workspace/TMSUpgrade3/DotNetFrameworkProject_CE040_CE087/Tour_Management/obj/Debug/net8.0/refint/Tour_Management.dll
+/modernize-data/studio-data/TNT1001/APP400932/transformed-code/256/studio-workspace/TMSUpgrade3/DotNetFrameworkProject_CE040_CE087/Tour_Management/obj/Debug/net8.0/Tour_Management.pdb
+/modernize-data/studio-data/TNT1001/APP400932/transformed-code/256/studio-workspace/TMSUpgrade3/DotNetFrameworkProject_CE040_CE087/Tour_Management/obj/Debug/net8.0/ref/Tour_Management.dll

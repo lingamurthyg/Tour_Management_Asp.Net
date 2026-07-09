@@ -1,3 +1,6 @@
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using TourManagement.Application.Interfaces;
 using TourManagement.Infrastructure.Persistence;
@@ -10,7 +13,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 
 builder.Services.AddDbContext<TourDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlServer(builder.Configuration.GetSection("ConnectionStrings")["DefaultConnection"] ?? ""));
 
 builder.Services.AddScoped<ITourService, TourService>();
 builder.Services.AddScoped<IBookingService, BookingService>();

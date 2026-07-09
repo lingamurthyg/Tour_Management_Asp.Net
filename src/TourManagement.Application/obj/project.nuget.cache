@@ -1,11 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ztw8a8jKp1I=",
+  "dgSpecHash": "TAxC2luaqTA=",
   "success": true,
   "projectFilePath": "/modernize-data/studio-data/TNT1001/APP400932/transformed-code/256/studio-workspace/TMSUpgrade3/src/TourManagement.Application/TourManagement.Application.csproj",
-  "expectedPackageFiles": [
-    "/app/.nuget/packages/microsoft.netcore.app.ref/8.0.16/microsoft.netcore.app.ref.8.0.16.nupkg.sha512",
-    "/app/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.16/microsoft.aspnetcore.app.ref.8.0.16.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
