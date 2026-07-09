@@ -18,27 +18,26 @@ namespace Tour_Management
 
         protected void Register_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString);
-            conn.Open();
-            string insertQuery = "insert into UserInfo(Email,FirstName,LastName,Gender,Password,dob,Street,City,State) values(@email,@FirstName,@LastName,@Gender,@Password,@dob,@Street,@City,@State)";
-            SqlCommand com = new SqlCommand(insertQuery, conn);
-            com.Parameters.AddWithValue("@Email", email.Text);
-            com.Parameters.AddWithValue("@FirstName", fname.Text);
-            com.Parameters.AddWithValue("@LastName", lname.Text);
-            com.Parameters.AddWithValue("@Gender", gender.Text);
-            com.Parameters.AddWithValue("@Password", password1.Text);
-            com.Parameters.AddWithValue("@dob", dob.Text);
-            com.Parameters.AddWithValue("@Street", street.Text);
-            com.Parameters.AddWithValue("@City", city.Text);
-            com.Parameters.AddWithValue("@State", state.Text);
-
-            com.ExecuteNonQuery();
-            Response.Write("Registration Successful");
-            Response.Redirect("userlogin.aspx");
-            Server.Transfer("usercrud.aspx");
-            conn.Close();
-
+            string connectionString = Environment.GetEnvironmentVariable("DB_CONNECTION_STRING") ?? ConfigurationManager.ConnectionStrings["dbconnection"]?.ConnectionString;
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string insertQuery = "insert into UserInfo(Email,FirstName,LastName,Gender,Password,dob,Street,City,State) values(@email,@FirstName,@LastName,@Gender,@Password,@dob,@Street,@City,@State)";
+                SqlCommand com = new SqlCommand(insertQuery, conn);
+                com.Parameters.AddWithValue("@Email", email.Text);
+                com.Parameters.AddWithValue("@FirstName", fname.Text);
+                com.Parameters.AddWithValue("@LastName", lname.Text);
+                com.Parameters.AddWithValue("@Gender", gender.Text);
+                com.Parameters.AddWithValue("@Password", password1.Text);
+                com.Parameters.AddWithValue("@dob", dob.Text);
+                com.Parameters.AddWithValue("@Street", street.Text);
+                com.Parameters.AddWithValue("@City", city.Text);
+                com.Parameters.AddWithValue("@State", state.Text);
+                com.ExecuteNonQuery();
+                Response.Write("Registration Successful");
+                Response.Redirect("userlogin.aspx");
+                Server.Transfer("usercrud.aspx");
+            }
         }
-           
-}
     }
+}

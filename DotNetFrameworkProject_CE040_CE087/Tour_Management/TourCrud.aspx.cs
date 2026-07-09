@@ -22,18 +22,15 @@ namespace Tour_Management
         }
         public void refreshdata()
         {
-            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString);
-            conn.Open();
-            string insertQuery = "select * from Tour";
-            SqlCommand com = new SqlCommand(insertQuery, conn);
-          // GridView1.DataSource = insertQuery;
-           // GridView1.DataBind();
-
-
-            // SqlConnection con = new SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True;User Instance=True");
-        //    SqlCommand cmd = new SqlCommand("select * from tbl_data", con);
-         //   SqlDataAdapter sda = new SqlDataAdapter(cmd);
-           // DataTable dt = new DataTable();
+            string connectionString = Environment.GetEnvironmentVariable("DB_CONNECTION_STRING") ?? ConfigurationManager.ConnectionStrings["dbconnection"]?.ConnectionString;
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string insertQuery = "select * from Tour";
+                SqlCommand com = new SqlCommand(insertQuery, conn);
+              // GridView1.DataSource = insertQuery;
+               // GridView1.DataBind();
+            }
             //sda.Fill(dt);
            // GridView1.DataSource = dt;
             //GridView1.DataBind();
