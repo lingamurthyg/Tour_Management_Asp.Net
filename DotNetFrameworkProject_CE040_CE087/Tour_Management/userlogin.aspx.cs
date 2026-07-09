@@ -20,13 +20,7 @@ namespace Tour_Management
             protected void Btn_Submit(object sender, EventArgs e)
             { 
             
-               
-
-                SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString);
-                conn.Open();
-                string checkPasswordQuery = "select password from Userinfo where password='" + txtPassword.Text + "' and email = '" + txtEmail.Text + "'";
-                SqlCommand passComm = new SqlCommand(checkPasswordQuery, conn);
-            string password = passComm.ExecuteScalar()?.ToString() ?? "";
+                conn.Open(); // Connection pooling is handled by RDS Proxy via the connection string
 
 
               
@@ -38,12 +32,7 @@ namespace Tour_Management
                 
                 Response.Redirect("MainProfilePage.aspx");
                     Server.Transfer(  "MainProfilePage.aspx");
-                }
-
-
-            
-            else
-                {
+            conn.Dispose();
                     Response.Write("Password is not correct");
                 
             }

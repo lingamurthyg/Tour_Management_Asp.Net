@@ -1,0 +1,107 @@
+@{
+    ViewData["Title"] = "Main Profile Page";
+}
+
+<ul class="nav navbar-nav navbar-left">
+    <li><a asp-controller="User" asp-action="UserCrud">Profile</a></li>
+    <li><a asp-controller="Tour" asp-action="DisplayTours">Tours</a></li>
+    <li><a asp-controller="Booking" asp-action="Order">Book Tour</a></li>
+    <li><a asp-controller="Booking" asp-action="MyBooking">Bookings info</a></li>
+</ul>
+
+<div class="welcome" style="text-align:center">
+    <h2>Welcome to Tour Management</h2>
+</div>
+
+<div class="tour">
+    <h2>
+        <br/> <br/> <br/>
+        <a asp-controller="Tour" asp-action="DisplayTours" class="btn btn-primary" style="width:300px; height:50px ; font-size:x-large;">Explore the Tours!</a><br/><br/><br/>
+        <p class="label-info">
+            Find the best tour packages without any hustle.<br/>
+            Book and pack your lugguage.
+        </p>
+    </h2>
+</div>
+
+<style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+    }
+    li {
+        float: left;
+        border-right: 1px solid #bbb;
+    }
+    li:last-child {
+        border-right: none;
+    }
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    li a:hover:not(.active) {
+        background-color: #111;
+    }
+    .active {
+        background-color: #04AA6D;
+    }
+    .tour {
+        background-image: url('../Pics/homepage.jpg');
+        background-size: cover;
+        text-align: center;
+        color: white;
+        height: 500px;
+        background-color: white;
+        opacity: 0.8;
+        justify-content: center;
+        vertical-align: central;
+    }
+    .a:link {
+        color: white;
+    }
+    .tour .a {
+        font-size: larger;
+        background-color: darkslateblue;
+        color: white;
+    }
+    .tour .p {
+        text-align: center;
+        color: white;
+    }
+    .tour h2 {
+        align-items: center;
+    }
+    .hotel {
+        background-image: url('../Pics/hotelcover.jpg');
+        background-color: black;
+        opacity: 0.8;
+        text-align: center;
+        vertical-align: central;
+        height: 500px;
+    }
+    .label-info {
+        color: white;
+        background-color: black;
+        opacity: 0.7;
+        padding-left: 50px;
+        align-content: center;
+    }
+    .places {
+        background-image: url('../Pics/PlaceDiv.JPG');
+        background-size: cover;
+        text-align: center;
+        color: white;
+        height: 500px;
+        background-color: white;
+        opacity: 0.8;
+        justify-content: center;
+        vertical-align: central;
+    }
+</style>

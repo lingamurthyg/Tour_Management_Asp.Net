@@ -21,21 +21,10 @@ namespace Tour_Management
             }
         }
         public void refreshdata()
-        {
-            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString);
-            conn.Open();
-            string insertQuery = "select * from Tour";
-            SqlCommand com = new SqlCommand(insertQuery, conn);
-          // GridView1.DataSource = insertQuery;
-           // GridView1.DataBind();
+            conn.Open(); // Connection pooling is handled by RDS Proxy via the connection string
 
 
-            // SqlConnection con = new SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True;User Instance=True");
-        //    SqlCommand cmd = new SqlCommand("select * from tbl_data", con);
-         //   SqlDataAdapter sda = new SqlDataAdapter(cmd);
-           // DataTable dt = new DataTable();
-            //sda.Fill(dt);
-           // GridView1.DataSource = dt;
+        // Ensure connection is disposed if used in a larger scope
             //GridView1.DataBind();
 
 

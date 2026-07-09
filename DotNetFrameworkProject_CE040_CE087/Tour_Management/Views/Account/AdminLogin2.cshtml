@@ -1,0 +1,32 @@
+@model Tour_Management.Models.LoginViewModel
+
+@{
+    ViewData["Title"] = "Admin Login";
+}
+
+<div class="container">
+    <h1>Admin Login</h1>
+    <form asp-action="Login" method="post">
+        <div class="form-group">
+            <label asp-for="Email">Email</label><br />
+            <input asp-for="Email" class="form-control" /><br />
+        </div>
+        <div class="form-group">
+            <label asp-for="Password">Password</label><br />
+            <input asp-for="Password" type="password" class="form-control" /><br />
+        </div>
+        <button type="submit" class="btn btn-primary">login</button>
+    </form>
+</div>
+
+<style>
+    .container {
+        text-align: center;
+        background-color: black;
+        width: 100%;
+        font-size: 30px;
+        color: white;
+        padding-bottom: 150px;
+        opacity: 0.8;
+    }
+</style>
