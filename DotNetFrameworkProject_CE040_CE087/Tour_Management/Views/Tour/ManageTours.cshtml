@@ -1,0 +1,49 @@
+@model IEnumerable<Tour_Management.Models.TourCrudViewModel>
+
+@{
+    ViewData["Title"] = "Manage Tours";
+}
+
+<h1 style="text-align:center">Manage Tours</h1>
+
+<div style="text-align:center">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>TOUR_ID</th>
+                <th>TOUR_NAME</th>
+                <th>PLACE</th>
+                <th>DAYS</th>
+                <th>PRICE</th>
+                <th>LOCATIONS</th>
+                <th>TOUR_INFO</th>
+                <th>pic</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody style="text-align:center">
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.TourId</td>
+                    <td>@item.TourName</td>
+                    <td>@item.Place</td>
+                    <td>@item.Days</td>
+                    <td>@item.Price</td>
+                    <td>@item.Locations</td>
+                    <td>@item.TourInfo</td>
+                    <td>
+                        <img src="~/Tour_pics/@item.Pic" style="width:150px;height:150px" />
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.TourId" class="btn btn-sm btn-primary">Edit</a>
+                        <form asp-action="Delete" method="post" style="display:inline">
+                            <input type="hidden" name="id" value="@item.TourId" />
+                            <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

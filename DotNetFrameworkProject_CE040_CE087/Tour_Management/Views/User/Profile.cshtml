@@ -1,0 +1,39 @@
+@model IEnumerable<Tour_Management.Models.UserCrudViewModel>
+
+@{
+    ViewData["Title"] = "User Profile";
+}
+
+<h1 style="text-align:center">User Profile</h1>
+
+<div style="text-align:center">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Email</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Gender</th>
+                <th>Password</th>
+                <th>City</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody style="text-align:center">
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Email</td>
+                    <td>@item.FirstName</td>
+                    <td>@item.LastName</td>
+                    <td>@item.Gender</td>
+                    <td>@item.Password</td>
+                    <td>@item.City</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Email" class="btn btn-sm btn-primary">Edit</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

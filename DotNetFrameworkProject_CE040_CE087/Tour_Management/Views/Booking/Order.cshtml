@@ -1,0 +1,67 @@
+@model Tour_Management.Models.BookingViewModel
+
+@{
+    ViewData["Title"] = "Confirm Tour";
+}
+
+<style>
+    .container-custom {
+        text-align: center;
+        background-color: black;
+        width: 100%;
+        font-size: 30px;
+        color: white;
+        padding-bottom: 150px;
+        opacity: 0.8;
+    }
+</style>
+
+<div class="container-custom">
+    <div class="page-header">
+        <h1>Confirm Tour</h1>
+    </div>
+    <div class="form-horizontal">
+        <form asp-action="Book" method="post">
+            <div class="form-group">
+                <div class="control-label col-sm-4">
+                    <label asp-for="CustomerName">Your Name</label>
+                </div>
+                <div class="col-sm-6">
+                    <input asp-for="CustomerName" class="form-control" required />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-sm-4">
+                    <label asp-for="City">Your City</label>
+                </div>
+                <div class="col-sm-6">
+                    <input asp-for="City" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-sm-4">
+                    <label asp-for="TourName">Tour Name</label>
+                </div>
+                <div class="col-sm-6">
+                    <input asp-for="TourName" class="form-control" required />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-sm-4">
+                    <label asp-for="MobileNumber">Mobile Number</label>
+                </div>
+                <div class="col-sm-6">
+                    <input asp-for="MobileNumber" type="number" class="form-control" required />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="control-label col-sm-2">
+                    <button type="submit" class="btn btn-primary" style="background-color:#cc6600; color:black;">Register</button>
+                </div>
+                <div class="control-label col-sm-2">
+                    <button type="reset" class="btn btn-secondary" style="background-color:#cc6600; color:black;">Reset</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+@model IEnumerable<Tour_Management.Models.AllBookingViewModel>
+
+@{
+    ViewData["Title"] = "All Bookings";
+}
+
+<h1 style="text-align:center">All Bookings</h1>
+
+<div style="text-align:center">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>TOUR_ID</th>
+                <th>TOUR_NAME</th>
+                <th>PLACE</th>
+                <th>Email</th>
+                <th>FirstName</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.TourId</td>
+                    <td>@item.TourName</td>
+                    <td>@item.Place</td>
+                    <td>@item.Email</td>
+                    <td>@item.FirstName</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

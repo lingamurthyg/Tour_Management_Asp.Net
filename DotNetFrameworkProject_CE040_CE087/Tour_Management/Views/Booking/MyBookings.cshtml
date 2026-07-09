@@ -1,0 +1,34 @@
+@model IEnumerable<Tour_Management.Models.MyBookingViewModel>
+
+@{
+    ViewData["Title"] = "Your Current Booking";
+}
+
+<h1 style="text-align:center">YOUR CURRENT BOOKING</h1>
+
+<div style="margin-top: 96px; text-align:center">
+    <table class="table table-striped" style="width:546px; margin: 0 auto;">
+        <thead>
+            <tr>
+                <th>TOUR_NAME</th>
+                <th>ID</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.TourName</td>
+                    <td>@item.TourId</td>
+                    <td>
+                        <form asp-action="DeleteBooking" method="post">
+                            <input type="hidden" name="tourId" value="@item.TourId" />
+                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
